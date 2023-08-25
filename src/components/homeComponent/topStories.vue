@@ -40,11 +40,11 @@ onMounted(() => {
     <div class="grid">
         <div class="col-12">
             <div class="card">
-                <DataView :value="data.topStories" :layout="layout" :paginator="true" :rows="9" :sortOrder="sortOrder" :sortField="sortField">
+                <DataView :value="data.topStories" :layout="layout" :paginator="true" :rows="15" :sortOrder="sortOrder" :sortField="sortField">
                     <template #header>
                         <div class="grid grid-nogutter" style="display: flex; align-items: center; justify-content: space-between">
                             <h4 style="margin: 0">Top Stories</h4>
-                            <DataViewLayoutOptions v-model="layout" />
+                            <!-- <DataViewLayoutOptions v-model="layout" /> -->
                         </div>
                     </template>
                     <template #list="slotProps">
