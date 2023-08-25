@@ -101,11 +101,11 @@ import TriStateCheckbox from 'primevue/tristatecheckbox';
 import VirtualScroller from 'primevue/virtualscroller';
 
 import BlockViewer from '@/components/BlockViewer.vue';
+import { createPinia } from 'pinia';
 
 import '@/assets/styles.scss';
-
+const pinia = createPinia();
 const app = createApp(App);
-
 app.use(router);
 app.use(PrimeVue, { ripple: true });
 app.use(ToastService);
@@ -209,4 +209,5 @@ app.component('TreeTable', TreeTable);
 app.component('TriStateCheckbox', TriStateCheckbox);
 app.component('VirtualScroller', VirtualScroller);
 
+app.use(pinia);
 app.mount('#app');
